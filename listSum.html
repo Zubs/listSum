@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>listSum.js</title>
+    <script type="text/javascript">
+        //This checks if a number is Prime
+        function getPrime(number) {
+            var factors = ''
+            var i = 2
+            while (i < number) {
+                if (number % i == 0) {
+                    factors += i
+                }
+                i++
+            }
+            if (factors == 0) {
+                return true
+            }
+        }
+
+        //This prints two Prime numbers that sum up to user's input
+        function listSum(number) {
+            if (number % 2 == 0) {
+                var i = 1
+                while (i < number) {
+                    var addition = number - i
+                    if ((getPrime(i) == true) && (getPrime(addition) == true)) {
+                        console.log(`${i} + ${addition}`)
+                    }
+                    }
+                    i++
+                }
+            } //else {
+                //console.log(`${number} is not even`)
+            //}
+        //}
+
+        var x = prompt("Enter a number:")
+        listSum(x)
+    </script>
+</head>
+<body>
+
+</body>
+</html>
